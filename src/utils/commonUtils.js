@@ -1,0 +1,1 @@
+export const appTitle = process.env.REACT_APP_TITLE

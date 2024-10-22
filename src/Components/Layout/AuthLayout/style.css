@@ -1,0 +1,91 @@
+.authBg {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../../Assets/images/authBg.png");
+}
+
+.text-theme-primary {
+  color: #d71201;
+}
+
+.authBox {
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0.5rem;
+  background-image: linear-gradient(
+    to right,
+    rgb(0 0 0 / 75%),
+    rgb(0 0 0 / 74%)
+  );
+  border-radius: 35px;
+}
+
+.authImage img {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+}
+
+.authFormWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.authImage {
+  height: 100%;
+}
+.authForm {
+  border-radius: 0px;
+  padding: 2rem 3rem;
+  width: 100%;
+}
+
+.authLogo {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.authLogo img {
+  max-width: 100%;
+}
+
+.authFormHeader {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.authTitle {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primaryColor);
+}
+
+.authPara {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.authForm h1 {
+  font-size: 3rem !important;
+}
+
+.logo a,
+.sidebar-heading a {
+  text-decoration: none;
+}
+.logo h2 {
+  color: #fff;
+  font-size: 40px;
+}
+.logo h2 span,
+.sidebar-heading h2 span {
+  font-size: inherit !important;
+  color: #e19825;
+}

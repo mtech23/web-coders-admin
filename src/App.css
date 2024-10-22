@@ -1,0 +1,7 @@
+td.activeAndDeactivate {
+    display: flex;
+    align-items: center;
+}
+.activeAndDeactivate p{
+    margin-bottom: 5px;
+}
