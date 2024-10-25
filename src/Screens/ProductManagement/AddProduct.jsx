@@ -21,6 +21,7 @@ export const AddProduct = () => {
   const [modalHeading, setmodalHeading] = useState("");
   const [modalBtn, setModalBtn] = useState("");
   const [edit, setEdit] = useState(false);
+  const [modalMessage, setModalMessage] = useState(false);
   const [addVariantModal, setAddVariantModal] = useState(false);
   const [success, setSuccess] = useState(false);
   const [variantDataaa, setVariantData] = useState({});
@@ -169,37 +170,45 @@ export const AddProduct = () => {
     console.log("formData", formData);
     event.preventDefault();
 
-    try {
-      const response = await addEntity("/add-product", formData);
-      if (response.status) {
-        console.log("response before if", response.status);
-        setmodalHeading("product added");
-        setSuccess(true);
-        setEdit(true);
-        setTimeout(() => {
-          navigate(-1);
-        }, 1500);
-      } else if (!response.status) {
-        console.log("response before if", response.status);
+    if (formData.themes.length != 0) {
+      try {
+        const response = await addEntity("/add-product", formData);
+        if (response.status) {
+          console.log("response before if", response.status);
+          setmodalHeading("product added");
+          setSuccess(true);
+          setEdit(true);
+          setTimeout(() => {
+            navigate(-1);
+          }, 1500);
+        } else if (!response.status) {
+          console.log("response before if", response.status);
+          setmodalHeading("error adding product ");
+          setSuccess(false);
+          setEdit(true);
+        }
+      } catch (error) {
+        // console.log("response before if", response.status);
         setmodalHeading("error adding product ");
         setSuccess(false);
         setEdit(true);
+        // console.error("Error submitting form:", error);
+        // alert("error", error.message);
+  
+        console.error("Error submitting form:", error);
       }
-    } catch (error) {
-      // console.log("response before if", response.status);
-      setmodalHeading("error adding product ");
-      setSuccess(false);
-      setEdit(true);
-      // console.error("Error submitting form:", error);
-      // alert("error", error.message);
-
-      console.error("Error submitting form:", error);
+      // finally {
+      //   setTimeout(() => {
+      //     navigate(-1);
+      //   }, 1500);
+      // }
     }
-    // finally {
-    //   setTimeout(() => {
-    //     navigate(-1);
-    //   }, 1500);
-    // }
+     else{
+      // alert("Add Variant")
+        setmodalHeading("Please Add Atleast One Variant!");
+        setSuccess(true);
+        setModalMessage(true);
+     }
   };
 
   console.log("formData", formData);
@@ -509,6 +518,13 @@ export const AddProduct = () => {
             show={edit}
             success={success}
             close={() => setEdit(false)}
+            heading={modalHeading}
+          ></CustomModal>
+          <CustomModal
+            autoClose={false}
+            show={modalMessage}
+            success={false}
+            close={() => setModalMessage(false)}
             heading={modalHeading}
           ></CustomModal>
         </div>

@@ -67,7 +67,7 @@ export const OrderDetails = () => {
               </div> */}
 
               <div className="row">
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Name</h5>
                     <p className="text-capitalize">
@@ -76,7 +76,7 @@ export const OrderDetails = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Email</h5>
                     <p className="text-capitalize">
@@ -85,7 +85,7 @@ export const OrderDetails = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Phone</h5>
                     <p className="text-capitalize">
@@ -94,7 +94,7 @@ export const OrderDetails = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Message</h5>
                     <p className="text-capitalize">
@@ -103,7 +103,7 @@ export const OrderDetails = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Product Id</h5>
                     <p className="text-capitalize">
@@ -112,7 +112,7 @@ export const OrderDetails = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Product Variant Id</h5>
                     <p className="text-capitalize">
@@ -123,7 +123,7 @@ export const OrderDetails = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Website Purpose</h5>
                     <p className="text-capitalize">
@@ -134,7 +134,7 @@ export const OrderDetails = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Target Audience</h5>
                     <p className="text-capitalize">
@@ -145,7 +145,7 @@ export const OrderDetails = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Website Goals</h5>
                     <p className="text-capitalize">
@@ -156,7 +156,7 @@ export const OrderDetails = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Desired Features</h5>
                     <p className="text-capitalize">
@@ -167,7 +167,7 @@ export const OrderDetails = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Existing Branding</h5>
                     <p className="text-capitalize">
@@ -178,7 +178,7 @@ export const OrderDetails = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Existing Content</h5>
                     <p className="text-capitalize">
@@ -189,7 +189,7 @@ export const OrderDetails = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Domain Name</h5>
                     <p className="text-capitalize">
@@ -198,7 +198,7 @@ export const OrderDetails = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Web Hosting</h5>
                     <p className="text-capitalize">
@@ -207,7 +207,7 @@ export const OrderDetails = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Pick Date</h5>
                     <p className="text-capitalize">
@@ -216,7 +216,7 @@ export const OrderDetails = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Decision Making</h5>
                     <p className="text-capitalize">
@@ -227,7 +227,7 @@ export const OrderDetails = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Communication</h5>
                     <p className="text-capitalize">
@@ -238,7 +238,7 @@ export const OrderDetails = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Theme</h5>
                     <p className="text-capitalize">
@@ -247,7 +247,7 @@ export const OrderDetails = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Variant Name</h5>
                     <p className="text-capitalize">
@@ -263,7 +263,7 @@ export const OrderDetails = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">ID</h5>
                     <p className="text-capitalize">
@@ -272,7 +272,7 @@ export const OrderDetails = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Category Id</h5>
                     <p className="text-capitalize">
@@ -283,7 +283,7 @@ export const OrderDetails = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Title</h5>
                     <p className="text-capitalize">
@@ -294,18 +294,9 @@ export const OrderDetails = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
-                  <div className="productInfo">
-                    <h5 className="text-capitalize">Description</h5>
-                    <p className="text-capitalize">
-                      {data?.product?.description
-                        ? data?.product?.description
-                        : "Not Available"}
-                    </p>
-                  </div>
-                </div>
+                
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Author</h5>
                     <p className="text-capitalize">
@@ -316,7 +307,7 @@ export const OrderDetails = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Link</h5>
                     <p className="text-capitalize">
@@ -329,7 +320,7 @@ export const OrderDetails = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Featured</h5>
                     <p className="text-capitalize">
@@ -340,12 +331,23 @@ export const OrderDetails = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Active</h5>
                     <p className="text-capitalize">
                       {data?.product?.active
                         ? data?.product?.active
+                        : "Not Available"}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="col-xl-4 col-md-6 mb-4">
+                  <div className="productInfo">
+                    <h5 className="text-capitalize">Description</h5>
+                    <p className="text-capitalize">
+                      {data?.product?.description
+                        ? data?.product?.description
                         : "Not Available"}
                     </p>
                   </div>
@@ -358,7 +360,7 @@ export const OrderDetails = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">ID</h5>
                     <p className="text-capitalize">
@@ -369,7 +371,7 @@ export const OrderDetails = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Product Id</h5>
                     <p className="text-capitalize">
@@ -380,7 +382,7 @@ export const OrderDetails = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Variation Name</h5>
                     <p className="text-capitalize">
@@ -391,7 +393,7 @@ export const OrderDetails = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Variation Type</h5>
                     <p className="text-capitalize">
@@ -402,7 +404,7 @@ export const OrderDetails = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Variation Value</h5>
                     <p className="text-capitalize">
@@ -413,7 +415,7 @@ export const OrderDetails = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Link</h5>
                     <p className="text-capitalize">
@@ -426,7 +428,7 @@ export const OrderDetails = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Active</h5>
                     <p className="text-capitalize">

@@ -73,7 +73,7 @@ export const UserDetails = () => {
                   </div>
                 </div> */}
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Profile</h5>
                     <div className="user_profile-img">
@@ -82,35 +82,35 @@ export const UserDetails = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Name</h5>
                     <p className="text-capitalize">{data?.name ? data?.name : "Not Available"}</p>
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Email</h5>
                     <p className="text-capitalize">{data?.email ? data?.email : "Not Available"}</p>
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Phone Number</h5>
                     <p className="text-capitalize">{data?.phone_number ? data?.phone_number : "Not Available"}</p>
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Auth ID</h5>
                     <p className="text-capitalize">{data?.auth_id ? data?.auth_id : "Not Available"}</p>
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Role</h5>
                     {data?.role == 1 ? (
@@ -121,7 +121,7 @@ export const UserDetails = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Status</h5>
                     {data?.status == 0 ? (

@@ -48,7 +48,6 @@ export const ProductDetails = () => {
               </div> */}
 
               <div className="row">
-
                 <div className="row">
                   <div className="col-md-12">
                     <h1>Slide Images</h1>
@@ -71,36 +70,29 @@ export const ProductDetails = () => {
                 </div>
 
                 <div className="col-md-12">
-                    <h1>Theme Data</h1>
-                  </div>
-                <div className="col-md-6 mb-4">
+                  <h1>Theme Data</h1>
+                </div>
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Name</h5>
                     <p className="text-capitalize">{data?.title}</p>
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
-                  <div className="productInfo">
-                    <h5 className="text-capitalize">Description</h5>
-                    <p className="text-capitalize">{data?.description}</p>
-                  </div>
-                </div>
-
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Author</h5>
                     <p className="text-capitalize">{data?.author}</p>
                   </div>
                 </div>
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Category</h5>
                     <p className="text-capitalize">{data?.category}</p>
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Base URL</h5>
                     <p className="text-capitalize">
@@ -109,10 +101,17 @@ export const ProductDetails = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6 mb-4">
+                <div className="col-xl-4 col-md-6 mb-4">
                   <div className="productInfo">
                     <h5 className="text-capitalize">Featured</h5>
                     <p className="text-capitalize">{data?.featured}</p>
+                  </div>
+                </div>
+
+                <div className="col-xl-4 col-md-6 mb-4">
+                  <div className="productInfo">
+                    <h5 className="text-capitalize">Description</h5>
+                    <p className="text-capitalize">{data?.description}</p>
                   </div>
                 </div>
 
@@ -121,8 +120,8 @@ export const ProductDetails = () => {
                     <h1>Variations</h1>
                   </div>
                   {data?.themes?.map((item, index) => (
-                    <div className="col-md-4 mb-4">
-                      <div class="card">
+                    <div className="col-lg-6 mb-4">
+                      <div class="card variation_card">
                         <div class="card-body">
                           <h2 class="card-title">Variant {index + 1}</h2>
                           <div className="row">
@@ -166,10 +165,10 @@ export const ProductDetails = () => {
                 </div>
 
                 <div className="row">
-                  <div className="col-md-6 mb-4">
+                  <div className="col-md-6  mb-4">
+                    {/* <h5 className="text-capitalize">Thumbnail Image</h5> */}
+                    <h1>Thumbnail Image</h1>
                     <div className="productInfo">
-                      {/* <h5 className="text-capitalize">Thumbnail Image</h5> */}
-                      <h1>Thumbnail Image</h1>
                       <div className="slide_image-preview">
                         <div className="slide_img">
                           <img

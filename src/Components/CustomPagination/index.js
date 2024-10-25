@@ -8,6 +8,8 @@ const CustomPagination = ({
   onPageChange,
 }) => {
   const totalPages = Math.ceil(totalItems / itemsPerPage);
+  console.log("totalPages", totalPages);
+  
   const pageNumbers = [];
 
   for (let i = 1; i <= totalPages; i++) {
@@ -26,7 +28,7 @@ const CustomPagination = ({
         </li>
         {pageNumbers.map((pageNumber) => (
           <li key={pageNumber}>
-            <button onClick={() => onPageChange(pageNumber)}>
+            <button className={pageNumber == currentPage ? "bg-dark": ""} onClick={() => onPageChange(pageNumber)}>
               {pageNumber}
             </button>
           </li>

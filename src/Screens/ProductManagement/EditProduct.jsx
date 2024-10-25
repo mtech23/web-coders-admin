@@ -35,7 +35,7 @@ export const EditProduct = () => {
   });
   const [categories, setCategories] = useState([]);
 
-  console.log("formData.slideImages", formData.slideImages)
+  console.log("formData.slideImages", formData.slideImages);
 
   const getProduct = async () => {
     try {
@@ -80,7 +80,7 @@ export const EditProduct = () => {
     }
     setAddVariantModal(true);
   };
-  
+
   console.log("varianttt", variantDataaa);
 
   const handleChange = (event) => {
@@ -147,13 +147,12 @@ export const EditProduct = () => {
 
   const handleDeleteVariant = async (variant_id) => {
     try {
-      const response = await deleteEntity(`/delete-variant/${variant_id}`)
+      const response = await deleteEntity(`/delete-variant/${variant_id}`);
       getProduct();
     } catch (error) {
       console.log("error", error);
-      
     }
-  }
+  };
 
   // const handleRemoveImage = (index) => {
   //   setSlideImages((prevImages) => prevImages.filter((_, i) => i !== index));

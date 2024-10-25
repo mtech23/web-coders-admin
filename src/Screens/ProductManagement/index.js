@@ -22,9 +22,12 @@ import { getEntity, deleteEntity } from "../../services/commonServices";
 import { imgUrl } from "../../utils/convertToFormData";
 import Chip from "../../Components/chip";
 import { appTitle } from "../../utils/commonUtils";
+import { SelectBox } from "../../Components/CustomSelect";
+import CustomInput from "../../Components/CustomInput";
 
 export const ProductManagement = () => {
   const [data, setData] = useState([]);
+  const [totoalProducts, setTotalProducts] = useState(0);
   const [dropdownOpen, setDropdownOpen] = useState({});
 
   const [showModal, setShowModal] = useState(false);
@@ -32,10 +35,37 @@ export const ProductManagement = () => {
   const [showModal3, setShowModal3] = useState(false);
   const [showModal4, setShowModal4] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(8);
+  const [itemsPerPage, setItemsPerPage] = useState(20);
+  const [pageNumber, setPageNumber] = useState(1);
   const [inputValue, setInputValue] = useState("");
+  const [formData, setFormData] = useState();
+
+  console.log("formData", formData);
+  console.log("data", data);
+  console.log("totoalProducts",  totoalProducts);
 
   const navigate = useNavigate();
+
+  const [categories, setCategories] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState(null);
+
+  console.log("categories", categories);
+
+  const getCategories = async () => {
+    try {
+      const response = await getEntity("/get-categories");
+      console.log("aa", response.data);
+      setCategories(
+        response.data.map((item) => ({ id: item.id, name: item.title }))
+      );
+    } catch (error) {
+      console.log("categores Error", error);
+    }
+  };
+
+  useEffect(() => {
+    getCategories();
+  }, []);
 
   const [modalHeading, setModalHeading] = useState("");
   const [edit, setEdit] = useState(false);
@@ -44,8 +74,6 @@ export const ProductManagement = () => {
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
-
-  console.log();
 
   const hanldeRoute = () => {
     navigate("/add-product");
@@ -60,22 +88,46 @@ export const ProductManagement = () => {
     setShowModal4(true);
   };
 
+  const filterData = data?.filter((item) =>
+    item?.title.toLowerCase().includes(inputValue.toLowerCase())
+  );
+
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = data?.slice(indexOfFirstItem, indexOfLastItem);
+  const currentItems = filterData?.slice(indexOfFirstItem, indexOfLastItem);
+
+  console.log("selectedCategory", selectedCategory);
 
   const ProductData = async () => {
-    const response = await getEntity("/get-products");
-    console.log(response.data)
-    if (response) {
-      setData(response.data);
+    // setCurrentPage(1)
+    if (selectedCategory) {
+      const response = await getEntity(
+        selectedCategory != "Select category_id"
+          ? `/get-products?category=${selectedCategory}`
+          : `/get-products?per_page=20&page=${currentPage}`
+      );
+      console.log(response.data);
+      if (response) {
+        setData(response.data);
+        setTotalProducts(response.total)
+      }
+    } else {
+      const response = await getEntity(
+        `/get-products?per_page=20&page=${currentPage}`
+      );
+      console.log(response.data);
+      if (response) {
+        setData(response.data);
+        setTotalProducts(response.total)
+      }
     }
   };
 
   useEffect(() => {
     document.title = `${appTitle} | Product Management`;
     ProductData();
-  }, []);
+  }, [selectedCategory, currentPage]);
+
   const handleDropdownToggle = (userId) => {
     setDropdownOpen((prevState) => ({
       ...prevState,
@@ -118,6 +170,19 @@ export const ProductManagement = () => {
     },
   ];
 
+  console.log("currentPage", currentPage);
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+    setInputValue(event.target.value);
+  };
+
+  console.log("pageNumber", pageNumber, currentPage, totoalProducts);
+
   return (
     <>
       <DashboardLayout>
@@ -146,19 +211,51 @@ export const ProductManagement = () => {
                     </div>
                   </div>
                 </div>
+
+                <div className="row mb-2">
+                  <div className="col-xl-4 col-lg-6 col-md-6 mb-2">
+                    <SelectBox
+                      selectClass="mainInput"
+                      name="category_id"
+                      label="Categories"
+                      placeholder="Categories"
+                      required
+                      value={selectedCategory}
+                      option={categories}
+                      onChange={(e) =>
+                        setSelectedCategory(
+                          e.target.value === e.target.name
+                            ? null
+                            : e.target.value
+                        )
+                      }
+                      // onChange={(e) => console.log("e.target", e.target.name, e.target.value)}
+                    />
+                  </div>
+                  <div className="col-xl-4 col-lg-6 col-md-6 mb-2">
+                    <CustomInput
+                      type="text"
+                      label="Search"
+                      placeholder="Search Here..."
+                      value={inputValue}
+                      inputClass="mainInput"
+                      onChange={handleChange}
+                    />
+                  </div>
+                </div>
+
                 <div className="row mb-3">
                   <div className="col-12">
                     <CustomTable headers={maleHeaders}>
                       <tbody>
-                        {currentItems?.map((item, index) => (
+                        {filterData?.map((item, index) => (
                           <tr key={index}>
-                            <td className="text-capitalize">{index + 1}</td>
+                            {/* <td className="text-capitalize">{index + 1}</td> */}
+                            <td className="text-capitalize">{item?.id}</td>
                             <td className="text-capitalize">{item?.title}</td>
                             <td className="text-capitalize">{item?.author}</td>
                             <td>{item?.category}</td>
-                            <td>
-                              {item?.themes.length}
-                            </td>
+                            <td>{item?.themes.length}</td>
                             <td>
                               <Dropdown
                                 className="tableDropdown"
@@ -229,7 +326,8 @@ export const ProductManagement = () => {
                     <CustomPagination
                       showing={currentItems?.length}
                       itemsPerPage={itemsPerPage}
-                      totalItems={data?.length}
+                      // totalItems={data?.length}
+                      totalItems={totoalProducts}
                       currentPage={currentPage}
                       onPageChange={handlePageChange}
                     />
