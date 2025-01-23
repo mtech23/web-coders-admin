@@ -20,3 +20,4 @@ export const addBlog = async (data) => {
     throw new Error(error.response?.data?.message || "Something went wrong");
   }
 };
+    
